@@ -1,0 +1,12 @@
+<h1>Songs<a href="/songs/new">add song</a></h1>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <a href="/songs/<%= song.id %>">
+      <%= song.title %> - <%= song.artist.name %>
+      </a>
+    </li>
+  <% end %>
+
+</ul>
